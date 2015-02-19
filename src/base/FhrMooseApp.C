@@ -28,6 +28,7 @@ FhrMooseApp::~FhrMooseApp()
 {
 }
 
+extern "C" void FhrMooseApp__registerApps() { FhrMooseApp::registerApps(); }
 void
 FhrMooseApp::registerApps()
 {
