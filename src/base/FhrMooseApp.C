@@ -10,10 +10,9 @@ InputParameters validParams<FhrMooseApp>()
   return params;
 }
 
-FhrMooseApp::FhrMooseApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+FhrMooseApp::FhrMooseApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);
